@@ -1,0 +1,165 @@
+\section{Complex Trigonometry}
+\label{sec:complex_trigonometry}
+
+\subsection{Euler's formula}
+
+{\bf Euler's formula} (pronounced Oiler) is the pinnacle of trigonometry.  It provides an intuitive method for understanding nearly everything covered in this book.  Unfortunatly, every useful proof of this formula requires calculus, so you will have to take it on faith that it is true, for now.  Euler's formula is:\\
+
+\tab$e^{i\theta} = cos(\theta) + isin(\theta)$\\
+
+That's it.  A single formula that encapsulates almost every idea in trigonometry.  If there's one thing to walk away from this book knowing, its Euler's formula.\\
+
+\subsection{Phasors}
+
+If you look closely at Euler's formula, you should notice some familiarities from earlier sections.  The right hand side of the equation looks an awful lot like a polar complex number converted to rectangular form, right?\\
+
+\tab$r\angle\theta = r*(cos(\theta) + isin(\theta))$\\
+
+In fact, if we multiplied Euler's formula by a modulus, we would see
+
+\tab$re^{i\theta} = rcos(\theta) + r i sin(\theta)$\\
+
+What this implies, interestingly enough, is that there is an actual mathematical formula for writing a complex number in polar form.  This is called the {\bf phasor form} of a complex number, or a {\bf phasor}.\\
+
+Put another way, $r\angle\theta$ is another way of writing $re^{i\theta}$, and Euler's formula is another way of saying that a complex number in rectangular form is the same number in polar form, just written a different way.\\
+
+\subsection{Another look at polar arithmetic}
+
+Using Euler's formula and phasors, we can prove many previous properties of trigonometry and complex numbers. Let's look at multiplying two complex numbers in phasor form:\\
+
+\tab$r_1e^{i\theta_1} * r_2e^{i\theta_2}$\\
+
+\tab$= r_1*r_2 * e^{i\theta_1} * e^{i\theta_2}$\\
+
+\tab$= r_1*r_2 * e^{i\theta_1 + i\theta_2}$\\
+
+\tab$= r_1r_2e^{i(\theta_1 + \theta_2)}$\\
+
+This should look familiar, this is how we described multiplying complex numbers in polar form previously.\\
+
+
+\subsection{Another look at negative angles}
+
+How about negative angles?  What happens if we put a netagive angle into Euler's formula?\\
+
+\tab$e^{i(-\theta)} = cos(-\theta) + isin(-\theta)$\\
+
+But, from the properties of exponents, we know that\\
+
+\tab$e^{i(-\theta)} = e^{i\theta * -1} = (e^{i\theta})^{-1} = \frac{1}{e^{i\theta}}$\\
+
+and\\
+
+\tab$\frac{1}{e^{i\theta}} = \frac{1}{cos(\theta) + isin(\theta)}$\\
+
+Note that this fraction consists of complex numbers in rectangular form.  We can simplify this expression by multiplying the numberator and denominator by the complex conjugate of the denominator.\\
+
+\tab$\frac{1}{cos(\theta) + isin(\theta)}$\\
+
+\tab$=  (\frac{1}{cos(\theta) + isin(\theta)})(\frac{cos(\theta) - isin(\theta)}{cos(\theta) - isin(\theta)})$\\
+
+\tab$=  \frac{cos(\theta) - isin(\theta)}{(cos(\theta) + isin(\theta))(cos(\theta) - isin(\theta))}$\\
+
+\tab$=  \frac{cos(\theta) - isin(\theta)}{cos^2(\theta) + sin^2(\theta)}$\\
+
+\tab$= cos(\theta) - isin(\theta)$ , by the Pythagorean identity.\\
+
+From this, we can see\\
+
+\tab$cos(\theta) - isin(\theta) = \frac{1}{e^{i\theta}} = e^{i(-\theta)} = cos(-\theta) + isin(-\theta)$\\
+
+Thus\\
+
+\tab$cos(-\theta) + isin(-\theta) = cos(\theta) - isin(\theta)$\\
+
+We know that if two complex numbers are equal, their real and imaginary parts are equal, thus we can say:\\
+
+\tab$cos(-\theta) = cos(\theta)$ \ \ \ and  \ \ \ $sin(-\theta) = -sin(\theta)$\\
+
+\subsection{Another look at the Pythagorean Identity}
+
+We can also rearrange the previous proof to derive the Pythagorean identity from Euler's formula.  Now we know\\
+
+\tab$e^{i\theta} = cos(\theta) + isin(\theta)$\\
+
+and\\
+
+\tab$e^{-i\theta} = cos(\theta) - isin(\theta)$\\
+
+From this,\\
+
+\tab$e^{i\theta}e^{-i\theta} = (cos(\theta) + isin(\theta))(cos(\theta) - isin(\theta))$\\
+
+\tab$e^{i\theta - i\theta} = cos^2(\theta) + sin^2(\theta)$\\
+
+\tab$e^0 = cos^2(\theta) + sin^2(\theta)$\\
+
+\tab$sin^2(\theta) + cos^2(\theta) = 1$\\
+
+We can also derive formulae for the sine and cosine of an angle in terms of phasors.\\
+
+\tab$e^{i\theta} + e^{-i\theta}$\\
+
+\tab$= cos(\theta) + isin(\theta) +  cos(\theta) - isin(\theta)$\\
+
+\tab$= 2cos(\theta)$\\
+
+therefore $cos(\theta) = \frac{1}{2}(e^{i\theta} + e^{-i\theta})$
+
+Likewise, for sine\\
+
+\tab$e^{i\theta} - e^{-i\theta}$\\
+
+\tab$= cos(\theta) + isin(\theta) -  cos(\theta) + isin(\theta)$\\
+
+\tab$= 2isin(\theta)$\\
+
+therefore $sin(\theta) = \frac{1}{2i}(e^{i\theta} - e^{-i\theta})$\\
+
+\subsection{Another look at two angles}
+
+Using the phasor forms of sine and cosine, we can also derive the equations  sine and cosine of the sum or difference of two angles.\\
+
+\tab$sin(\theta_1 + \theta_2) = \frac{1}{2i}(e^{i(\theta_1+\theta_2)} - e^{-i(\theta_1+\theta_2)})$\\
+
+\tab$= \frac{1}{2i}(e^{i\theta_1}e^{i\theta_2} - e^{-i\theta_1}e^{-i\theta_2})$\\
+
+by substitution,\\
+
+\tab$e^{i\theta_1}e^{i\theta_2} = (cos(\theta_1)+isin(\theta_1)(cos(\theta_2) + isin(\theta_2))$\\
+
+\tab$= cos(\theta_1)cos(\theta_2) - sin(\theta_1)sin(\theta2) + icos(\theta_1)sin(\theta_2) + isin(\theta_1)cos(\theta_2)$\\
+
+and\\
+
+\tab$e^{-i\theta_1}e^{-i\theta_2} = (cos(\theta_1)-isin(\theta_1)(cos(\theta_2) - isin(\theta_2))$\\
+
+\tab$= cos(\theta_1)cos(\theta_2) - sin(\theta_1)sin(\theta2) - icos(\theta_1)sin(\theta_2) - isin(\theta_1)cos(\theta_2)$\\
+
+thus\\
+
+\tab$e^{i\theta_1}e^{i\theta_2} - e^{-i\theta_1}e^{-i\theta_2} = 2isin(\theta_1)cos(\theta_2) + 2icos(\theta_1)sin(\theta_2)$\\
+
+and\\
+
+\tab$\frac{1}{2i}(e^{i\theta_1}e^{i\theta_2} - e^{-i\theta_1}e^{-i\theta_2}) = sin(\theta_1)cos(\theta_2) + cos(\theta_1)sin(\theta_2)$\\
+
+\tab$sin(\theta_1 + \theta_2) = sin(\theta_1)cos(\theta_2) + cos(\theta_1)sin(\theta_2)$\\
+
+\subsection{Conclusion}
+
+The above sections illustrate a very important point:  {\bf You can use Euler's formula to derive all of Trigonometry.}  Forgot the double-angle formula for sine?  Use Euler's formula.  Can't remember the phase offset between sine and cosine?  Use Euler's formula.\\
+
+It's rare that an entire subject can be succinctly described with one equation, so take advantage of it when you can.  Don't forget Euler's formula.
+
+\subsection{Review}
+
+\begin{enumerate}
+
+\item{What is Euler's formula?}
+
+\item{Use Euler's formula to derive the double-angle sine formula: \\ $sin(2\theta)=?$}
+
+\item{Use Euler's formula to find the phase offset between sine and cosine: \\ $sin(\theta + x) = cos(\theta) \implies ?$}
+
+\end{enumerate}

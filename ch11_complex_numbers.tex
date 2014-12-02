@@ -1,0 +1,183 @@
+\section{Complex Numbers}
+\label{sec:complex_numbers}
+
+\subsection{Imaginary numbers}
+
+Does a negative number really exist?  Intuitively, it is difficult to imagine any physical quantity that is truly negative.  You can hold one or two rocks in your hand, or even zero.  All of these are real physical qualities, but holding $-1$ rocks seems implausible.  You can't walk less than zero miles, or hold your breath for fewer than zero seconds.\\
+
+I posit that negative quantities do not really exist, but are instead just an artifact of addition.  Negative numbers exist as book-keeping, helping us describe the mathematics of addition completely.\\
+
+Likewise, there is another book-keeping artifact known as and {\bf imaginary number}.  An imaginary number is defined as the square root of a negative number.  This is a seemingly impossible operation, but using some careful rearrangement we can simplify the expression.\\
+
+\tab$\sqrt{-16}$\\
+
+\tab$ = \sqrt{16 * -1}$\\
+
+\tab$ = \sqrt{16} * \sqrt{-1}$\\
+
+\tab$ = 4\sqrt{-1}$\\
+
+Using this same technique, we can rewrite the square root of any negative number as the product of a real number and the $\sqrt{-1}$.  This is so commonplace that the symbol $i$ is standard notation for $\sqrt{-1}$.  Thus, \\
+
+\tab$\sqrt{-16} = 4i$ \ \  where \ \  $i = \sqrt{-1}$\\
+
+"Imaginary" is a bit misleading, as again, they are no more imaginary than negative numbers, but the term "imaginary" does illustrate an important point:  You will never see a real, physical quantity that contains an imaginary number.\\
+
+\subsection{Imaginary arithmetic}
+
+Imaginary numbers can be added together, or subtracted from one another, and the result is imaginary.\\
+
+\tab$2i + 4i = 6i$ \ \ and \ \ $2i - 4i = -2i$\\ 
+
+Imaginary numbers can be multiplied together, and the result will be real, but negated.\\
+
+\tab$ i * i = \sqrt{-1}\sqrt{-1} = -1 $\\
+
+\tab$2i * 4i = 2*4*(i*i) = 2*4*(-1) = -8$\\
+
+\tab$-2i * 4i = -2*4*(i*i) = -2*4*(-1) = 8$\\
+
+Imaginary numbers may also be divided, they will reduce accordingly\\
+
+\tab$\frac{4i}{2i} = 2$\\
+
+Interestingly enough, we can also multiply and divide a real number by an imaginary number.  Multiplication is trivial.\\
+
+\tab$4*2i = 8i$\\
+
+To understand division by an imaginary number, we must look again at the definition of $i$.\\
+
+\tab$i*i = -1$\\
+
+\tab$\implies \frac{i*i}{i} = \frac{-1}{i}$\\
+
+\tab$\implies i = \frac{-1}{i}$\\
+
+\tab$ \implies \frac{1}{i} = -i$\\
+
+Thus, dividing by $i$ is equivalent to multiplying by $-i$.\\
+
+\subsection{Complex numbers}
+
+
+While we can simplify the result of multiplying or dividing a real number by an imaginary number, there is no meaningful way to add a real number to an imaginary number, and simplify the result.  Therefore, the simplest notation for the sum of a real number and an imaginary number is $a + bi$.  This is known as a {\bf complex number}, a number with both a real component and an imaginary component.\\
+
+\subsection{Complex arithmetic}
+
+  We can perform all the basic arithmetic operations on complex numbers.  Addition and subtraction are simple, we just add or subtract the corresponding real and imaginary components.\\
+
+\tab$(a + bi) + (c + di) = (a+c) + (b+d)i$\\
+
+\tab$(a + bi) - (c + di) = (a-c) + (b-d)i$\\
+
+Multiplying two complex numbers is more involved; since there are two components in each number, we must use the distributive property.\\
+
+\tab$(a + bi) * (c + di)$\\
+
+\tab$= a*(c + di ) + bi * (c + di)$\\
+
+\tab$= ac + adi + bci +bd(i*i)$\\
+
+\tab$= (ac - bd) + (ad + bc)i$\\
+
+Note that if $ad + bc = 0$, the imaginary component is eliminated and we are left with a real result.  This is an important property because, given a complex number $z_1 = a + bi$, we can alwasy construct another complex number $z_2$, such that the product $z_1z_2$ is real.  If $a = c$ and $d = -b$, the imaginary parts will cancel and the result will be real.  This specific number is called the {\bf complex conjugate} of a complex number.\\
+
+For any complex number $a+bi$, the exists its complex conjugate $a-bi$, and $(a+bi)(a-bi)$ is real.  In fact $(a+bi)(a-bi) = a^2 + b^2$.\\
+
+The complex conjugate is particularly useful is simplifying the quotient of two complex numbers.  By multiplying the numberator and denominator by the complex conjugate of the denominator, we can reduce the denominator to a real number, and simplify.\\
+
+\tab$\frac{a+bi}{c+di}$\\
+
+\tab$= (\frac{a+bi}{c+di})(\frac{c-di}{c-di})$\\
+
+\tab$= \frac{(a+bi)(c-di)}{(c+di)(c-di)}$\\
+
+\tab$= \frac{(a+bi)(c-di)}{c^2+d^2}$\\
+
+\tab$= \frac{(ac+bd) + (bc-ad)i}{c^2+d^2}$\\
+
+\tab$= \frac{ac+bd}{c^2+d^2} + \frac{bc-ad}{c^2+d^2}i$\\
+
+In summary, we can see that the sum, difference, product, or quotient of two complex numbers can always be simplified to a simple complex number of the form $X + Yi$.\\
+
+\subsection{Polar form}
+
+It's convenient that complex numbers have two components, the real part and the imaginary part, and that they act as independent variables inside the number.  In fact, if we create a rectangular coordinate system where the x axis is treated as the "real" axis, and the y axis is treated as the "imaginary" axis, we can represent every complex number as a point in a 2-dimensional space.\\
+
+Here's where it gets interesting:  just because a point is in a 2d space doesn't mean we have to use a rectangular coordinate system.  We previously derived the polar coordinate system, and it turns out we can also represent complex numbers in a polar form.  Using the conversion from rectangular to polar, we can find the "radius" $r$ of a complex number $X + Yi$ is $r = \sqrt{X^2 + Y^2}$, and the "angle" $\theta$ of a complex number is $\theta = arctan(\frac{Y}{X})$.\\
+
+The mathematical term for $r$ is the {\bfseries modulus} of a complex number, and $\theta$ is the {\bfseries argument} of a complex number.  A complex number is typically written in polar form as $r\angle\theta$.\\
+
+Keep in mind that a point doesn't move when we change coordinate systems, it is at the same location regardless of whether we map it to a rectangular coordinate system or a polar coordinate system.  Likewise when we convert a complex number from rectangular to polar form, or vice versa, we are not changing the {\bf value} of the number, just how we describe it.\\
+
+\subsection{Polar arithmetic}
+
+Complex numbers in polar form are not easy to add or subtract;  to add or subtract two complex numbers, you should convert them to rectangular form first.  However, multiplying and dividing polar complex numbers is significantly easier in polar form:\\
+
+\tab$r_1\angle\theta_1 * r_2\angle\theta_2 = (r_1r_2)\angle(\theta_1 + \theta_2)$ \\
+
+\tab$\frac{r_1\angle\theta_1}{r_2\angle\theta_2} = (\frac{r_1}{r_2})\angle(\theta_1 - \theta_2)$ \\
+
+\subsection{Summary}
+
+In summary:\\
+
+To convert a complex number from rectangular to polar form:\\
+
+\tab$a+bi = (\sqrt{a^2+b^2})\angle (arctan(\frac{b}{a}))$\\
+
+To convert a complex number from polar to rectangular form:\\
+
+\tab$r\angle\theta = rcos(\theta) + r i sin(\theta)$\\
+
+To add or subtract two complex numbers, convert them to rectangular form, and add or subtract the real and imaginary parts.\\
+
+\tab$(a+bi) \pm (c+di) = (a \pm c) + (b \pm d)i$\\
+
+To multiply two complex numbers in rectangular form, distribute the product and simplify.\\
+
+\tab$(a + bi) * (c + di)$\\
+
+\tab$= a * (c + di) + bi * (c + di)$\\
+
+\tab$= ac + adi + bci + bdi^2$\\
+
+\tab$= (ac - bd) + (ad + bc)i$\\
+
+To multiply two complex numbers in polar form, multiply the moduli and add the arguments.\\
+
+\tab$r_1\angle\theta_1 * r_2\angle\theta_2 = (r_1r_2)\angle(\theta_1+\theta_2)$\\
+
+To divide one complex number by another in rectangular form, multiply both the numberator and denominator by the complex conjugate of the denominator, and simplify.\\
+
+\tab$\frac{a+bi}{c+di}$\\
+
+\tab$= (\frac{a+bi}{c+di})(\frac{c-di}{c-di})$\\
+
+\tab$= \frac{(a+bi)(c-di)}{(c+di)(c-di)}$\\
+
+\tab$= \frac{(a+bi)(c-di)}{c^2+d^2}$\\
+
+\tab$= \frac{(ac+bd) + (bc-ad)i}{c^2+d^2}$\\
+
+\tab$= \frac{ac+bd}{c^2+d^2} + \frac{bc-ad}{c^2+d^2}i$\\
+
+To divide one complex number by another in polar form, divide the moduli and subtract the arguments.\\
+
+\tab$\frac{r_1\angle\theta_1}{r_2\angle\theta_2} = (\frac{r_1}{r_2})\angle(\theta_1 - \theta_2)$ \\
+
+\subsection{Review}
+
+\begin{enumerate}
+
+\item{Convert these complex numbers to polar form: \\ $1,\  i ,\  -1,\  -i,\  1+i,\  i-1,\  -i-1,\  1-i,\  2+i,\  2+2i$}
+
+\item{Convert these complex numbers to rectangular form: \\ $1\angle0,\   1\angle90\degree,\  2\angle\frac{\pi}{6}\rad,\   3\angle-60\degree,\  1\angle\pi\rad,\  -2\angle\frac{\pi}{4},\  0\angle90\degree,\  0\angle20\degree$}
+
+\item{Simplify the following: \\ $(1+i)+(2+2i),\ (3+3i)-(1-i),\ (1\angle\frac{3\pi}{4}\rad)-i,\  (1\angle45\degree)+(1\angle-45\degree), $}
+
+\item{Simplify the following: \\ $(1+i)(1-i),\ (2+i)(3+3i),\ (1+i)(1\angle\frac{\pi}{4}\rad),\ (2\angle135\degree)(2\angle210\degree)$}
+
+\item{Simplify the following: \\ $\frac{1+i}{1-i},\ \frac{2+2i}{-3-i},\ \frac{1\angle\frac{\pi}{3}\rad}{1+i},\ \frac{1\angle30\degree}{1\angle-60\degree}$}
+
+\end{enumerate}

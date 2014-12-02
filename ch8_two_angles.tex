@@ -1,0 +1,73 @@
+\section{Two Angles}
+
+\subsection{Sum of two angles}
+
+A relationship exists between the sine of the sum of angles.  Memorize these formulae, as they are very useful.  There are methods to derive this relationship using geometry, but a more succint proof can be found using complex trigonometry, which will be shown in Chapter \ref{sec:complex_trigonometry}.\\
+
+\tab$sin(\alpha \pm \beta) = sin(\alpha)cos(\beta) \pm cos(\alpha)sin(\beta)$\\
+
+\tab$cos(\alpha \pm \beta) = cos(\alpha)cos(\beta) \mp sin(\alpha)sin(\beta)$\\
+
+\tab$tan(\alpha \pm \beta) = \frac{tan(\alpha) \pm tan(\beta)}{1 \mp tan(\alpha)tan(\beta)}$\\
+
+\subsection{Double angles}
+
+From the previous formulae, we can easily find equations for the sine, cosine, and tangent of twice some angle, by letting $\alpha = \beta$.\\
+
+\tab$sin(2\alpha) = 2sin(\alpha)cos(\alpha)$\\
+
+\tab$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$\\
+
+\tab$tan(2\alpha) = \frac{2tan(\alpha)}{1-tan^2(\alpha)}$
+
+\subsection{Half-angles}
+
+Using the double angle formulae for the cosine, and the Pythagorean identitiy, we can also derive equations for the half-angle of the sine and cosine.\\
+
+\tab$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$\\
+
+\tab$\implies cos(\alpha) = cos^2(\frac{\alpha}{2}) - sin^2(\frac{\alpha}{2})$\\
+
+\tab$\implies cos(\alpha) = cos^2(\frac{\alpha}{2}) - (1 - cos^2(\frac{\alpha}{2}))$\\
+
+\tab$\implies cos(\alpha) = 2cos^2(\frac{\alpha}{2}) -  1$\\
+
+\tab$\implies \frac{1 + cos(\alpha)}{2} = cos^2(\frac{\alpha}{2})$\\
+
+\tab$\implies cos(\frac{\alpha}{2}) = (\frac{1 + cos(\alpha)}{2})^{\frac{1}{2}}$\\
+
+Likewise, for the half-angle sine:\\
+
+\tab$cos(2\alpha) = cos^2(\alpha) - sin^2(\alpha)$\\
+
+\tab$\implies cos(\alpha) = cos^2(\frac{\alpha}{2}) - sin^2(\frac{\alpha}{2})$\\
+
+\tab$\implies cos(\alpha) = (1 - sin^2(\frac{\alpha}{2})) - sin^2(\frac{\alpha}{2})$\\
+
+\tab$\implies cos(\alpha) = 1- 2sin^2(\frac{\alpha}{2})$\\
+
+\tab$\implies \frac{1 - cos(\alpha)}{2} = sin^2(\frac{\alpha}{2})$\\
+
+\tab$\implies sin(\frac{\alpha}{2}) = (\frac{1 - cos(\alpha)}{2})^{\frac{1}{2}}$\\
+
+Frome these two, we can derive the half-angle formulae for tangent.\\
+
+\tab$tan(\frac{\alpha}{2}) = \frac{sin(\frac{\alpha}{2})}{cos(\frac{\alpha}{2})}$\\
+
+\tab$ = \frac{ (\frac{1 - cos(\alpha)}{2})^{\frac{1}{2}}}{ (\frac{1 + cos(\alpha)}{2})^{\frac{1}{2}}}$\\
+
+\tab$ = (\frac{\frac{1 - cos(\alpha)}{2}}{\frac{1 + cos(\alpha)}{2}})^{\frac{1}{2}}$\\
+
+\tab$ = (\frac{1 - cos(\alpha)}{1 + cos(\alpha)})^{\frac{1}{2}}$\\
+
+\subsection{Review}
+
+\begin{enumerate}
+
+\item{Write down the formulae for the sine, cosine, and tangent of the sum of two angles until you've committed them to memory.}\\
+
+\item{Using the previous formulae, derive the double angle formulae for sine, cosine, and tangent}
+
+\item{Using the previous formulae, derive the half angle formulae for sine, cosine, and tangent}
+
+\end{enumerate}
